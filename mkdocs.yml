@@ -1,0 +1,48 @@
+site_name: La meua web de Tecnologia
+
+docs_dir: 'md'
+site_dir: 'docs'
+
+# Tema a triar
+theme: 
+  name: material  # selecció del tema
+  palette:
+   # Boto que canvia a mode oscur
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Mode oscur
+    # Botó que canvia a mode clar
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Mode clar
+  features:
+    # utilitats de copia de codi
+    - content.code.copy 
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer       # footer de la pagina, amb navegació
+    - navigation.top    # boto flotant de tornar a dalt 
+
+
+# Navegació dels documents
+nav:
+    - Índex: index.md
+    - Treball plàstics: Treball.md
+    - Puntuació treball plàstics: Puntuacio.md
+    - Allotgem la web a Aules: aules.md
+    - Allotgem la web a github: github.md
+    - "Docència: Aules o github?": aules vs github.md
+
+# Extenions
+markdown_extensions:
+  - admonition
+  - attr_list         # permet afegir atributs a les etiquetes html 
+  # pymdownx és una col·leccio per escritura tècnica. S'instal·la per defecte
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      auto_title: true
